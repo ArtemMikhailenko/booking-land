@@ -8,7 +8,7 @@ import { FAQSection } from '@/features/faq';
 
 export default function Home() {
   return (
-    <main className='bg-[#e1e1e1]'>
+    <main className='bg-[#f0f0f0] '>
       <HeroSection />
       <ProductAudienceSection />
       <HowItWorksSection />

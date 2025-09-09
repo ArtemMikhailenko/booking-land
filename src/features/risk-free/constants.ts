@@ -6,18 +6,23 @@ export const RISK_FREE_DATA: RiskFreeData = {
   features: [
     {
       id: 1,
-      title: "Success fee",
-      description: "Lorem ipsum dolor sit amet consectetur. Pellentesque arcu metus mauris montes egestas. Adipiscing hac felis netus habitasse tellus senectus ac."
+      title: "Мінімальний відсоток відмов",
+      description: "Клієнт ще до бронювання має портреті днів з власником, що дозволяє заздалегідь відчути \"хімію\", ще до зустрічі. Можливість побачити фото домашніх тварин разом."
     },
     {
       id: 2,
-      title: "Success fee",
-      description: "Lorem ipsum dolor sit amet consectetur. Pellentesque arcu metus mauris montes egestas. Adipiscing hac felis netus habitasse tellus senectus ac."
+      title: "Тестовий період без ризиків",
+      description: "Суміщеність все! Ви отримаєте цілий місяць безкоштовного періоду користування додатком. Безпечний кешбек і безпека."
     },
     {
       id: 3,
-      title: "Success fee",
-      description: "Lorem ipsum dolor sit amet consectetur. Pellentesque arcu metus mauris montes egestas. Adipiscing hac felis netus habitasse tellus senectus ac."
+      title: "Технічна підтримка",
+      description: "Наша команда допоможе Vам вирішити питання Імігранти від додавання товарів до роботи з клієнтами."
+    },
+    {
+      id: 4,
+      title: "Ви завжди контролюєте процес",
+      description: "Ми розробили прозору зручність. Вам доводиться вводити контролювати Ви можете в будь-якому моменті що тестується."
     }
   ]
 };

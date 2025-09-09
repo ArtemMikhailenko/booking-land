@@ -24,8 +24,8 @@ export const HERO_CATEGORIES: CategoryItem[] = [
 ];
 
 export const HERO_CONTENT = {
-  mainTitle: "Знаходь\nпотрібне",
+  mainTitle: "Отримуй\nнових\nклієнтів\n",
   subtitle: "в пару\nкліків",
-  description: "Lorem ipsum dolor sit amet consectetur adipiscing elit mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.",
+  description: "Вас легко знайти власникам тварин, які шукають товари та послуги саме зараз.  Отримуєте постійний потік клієнтів без додаткових зусиль.",
   buttonText: "Почати"
 } as const;

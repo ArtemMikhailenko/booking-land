@@ -8,7 +8,7 @@ interface CategoriesListProps {
 
 export const CategoriesList: React.FC<CategoriesListProps> = ({ categories }) => {
   return (
-    <div className="space-y-4 mt-8 flex flex-col items-start">
+    <div className="space-y-[16px] flex flex-col items-start">
       {categories.map((category) => (
         <CategoryCard key={category.id} category={category} />
       ))}

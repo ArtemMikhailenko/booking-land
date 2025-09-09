@@ -8,7 +8,7 @@ interface CategoryCardProps {
 
 export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
   return (
-    <div className="flex items-center space-x-3 p-3 rounded-xl  group flex-row-reverse">
+    <div className="flex items-center space-x-3  rounded-xl gap-[11px]  group flex-row-reverse">
       {/* Category title */}
       <div className="text-gray-800 font-medium text-sm leading-tight whitespace-pre-line text-left">
         {category.title}
