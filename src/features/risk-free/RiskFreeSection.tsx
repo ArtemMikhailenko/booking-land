@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { FeatureCard } from "./components/FeatureCard";
 import { RISK_FREE_DATA } from "./constants";
+import { MAIN_ACTION_URL } from '@/constants';
 
 export function RiskFreeSection() {
   return (
@@ -14,10 +15,13 @@ export function RiskFreeSection() {
           {/* Button first on mobile */}
           <div className="flex justify-center mb-6">
             <Button 
+              asChild
               size="lg" 
               className="bg-[#9270cb] hover:bg-[transparent] hover:text-[#9270cb] hover:border-[#9270cb] border border-[#9270cb] h-[50px] text-white px-6 py-3 rounded-full text-base w-full sm:max-w-[280px]"
             >
-              {RISK_FREE_DATA.buttonText}
+              <a href={MAIN_ACTION_URL} target="_blank" rel="noopener noreferrer">
+                {RISK_FREE_DATA.buttonText}
+              </a>
             </Button>
           </div>
           
@@ -60,10 +64,13 @@ export function RiskFreeSection() {
               </div>
               
               <Button 
+                asChild
                 size="lg" 
                 className="bg-[#9270cb] hover:bg-[transparent] hover:text-[#9270cb] hover:border-[#9270cb] border border-[#9270cb] h-[60px] text-white px-8 py-4 rounded-full text-lg w-full"
               >
-                {RISK_FREE_DATA.buttonText}
+                <a href={MAIN_ACTION_URL} target="_blank" rel="noopener noreferrer">
+                  {RISK_FREE_DATA.buttonText}
+                </a>
               </Button>
             </div>
           </div>
