@@ -61,7 +61,7 @@ export function PricingSection() {
       {/* Desktop cat image - absolute positioned */}
       <div className="hidden lg:block flex-shrink-0 w-[full] max-w-[696px] absolute left-0 bottom-0">
         <img 
-          src="/images/landing/cat-bg.png" 
+          src="/images/landing/cat-bg.webp" 
           alt="Cat"
           className="w-full h-auto object-cover"
         />
@@ -103,7 +103,7 @@ export function PricingSection() {
           {/* Mobile cat image - positioned to show only top half */}
           <div className="relative w-full h-[280px] overflow-hidden">
             <img 
-              src="/images/landing/cat-bg-small.png" 
+              src="/images/landing/cat-bg-small.webp" 
               alt="Cat"
               className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[300px] h-auto object-cover"
             />

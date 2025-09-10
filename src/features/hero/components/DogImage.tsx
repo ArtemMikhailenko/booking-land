@@ -13,7 +13,7 @@ export const DogImage: React.FC = () => {
         {/* Dog image */}
         <div className="relative z-10 w-full h-full rounded-[24px] overflow-hidden">
           <img 
-            src="/images/landing/dog-main.png" 
+            src="/images/landing/dog-main.webp" 
             className="w-full h-full object-cover" 
             alt="Собака" 
           />
@@ -24,7 +24,7 @@ export const DogImage: React.FC = () => {
       <div className="hidden lg:flex justify-center items-center relative w-[636px] h-[787px]">
         {/* Dog image */}
         <img 
-          src="/images/landing/dog-main.png" 
+          src="/images/landing/dog-main.webp" 
           className="w-full h-full object-cover" 
           alt="Собака" 
         />

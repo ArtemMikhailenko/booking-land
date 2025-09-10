@@ -60,7 +60,7 @@ export function RiskFreeSection() {
 
             <div className="flex flex-col items-center max-w-[378px]">
               <div className="mb-[24px] w-full max-h-[558px]">
-                <img src="/images/landing/dog-why-we.png" className="w-full h-full object-cover rounded-[32px]" alt="" />
+                <img src="/images/landing/dog-why-we.webp" className="w-full h-full object-cover rounded-[32px]" alt="" />
               </div>
               
               <Button 
