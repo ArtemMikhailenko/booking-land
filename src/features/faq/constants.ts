@@ -1,32 +1,27 @@
 import { FAQData } from '@/types';
 
 export const FAQ_DATA: FAQData = {
-  title: "Часто задавані питання",
+  title: "Часто задаваемые вопросы",
   items: [
     {
       id: 1,
-      question: "Lorem ipsum dolor sit amet consectetur adipiscing",
-      answer: "Lorem ipsum dolor sit amet consectetur. Accumsan tincidunt id sem eget ultrices lectus lacus feugiat accumsan. Leo egestas commodo fermentum volutpat mollis. Risus nec convallis volutpat ornare mauris mattis rhoncus faucibus sit. Porttitor sit enim proin vitae sed cursus pellentesque. Feugiat urna augue donec amet magna. Iaculis condimentum a pellentesque etiam lectus euismod congue. Morbi curabitur interdum sed sagittis porttitor sed velit risus fringilla. Nunc vitae volutpat amet nunc et."
+      question: "Скільки це коштує?",
+      answer: "Як і написано на сайті — жодних передоплат. Ви платите тільки за результат: або 0,5% за бронь, або 3% за реальну покупку у вашому магазині."
     },
     {
       id: 2,
-      question: "Lorem ipsum dolor sit amet consectetur adipiscing",
-      answer: "Lorem ipsum dolor sit amet consectetur. Accumsan tincidunt id sem eget ultrices lectus lacus feugiat accumsan. Leo egestas commodo fermentum volutpat mollis. Risus nec convallis volutpat ornare mauris mattis rhoncus faucibus sit."
+      question: "Як підключитися?",
+      answer: "Ви можете самостійно зареєструватися й завантажити свій прайс у систему. Усе синхронізується протягом дня. Якщо виникнуть питання — наш технічний спеціаліст допоможе розібратися на кожному кроці."
     },
     {
       id: 3,
-      question: "Lorem ipsum dolor sit amet consectetur adipiscing",
-      answer: "Lorem ipsum dolor sit amet consectetur. Accumsan tincidunt id sem eget ultrices lectus lacus feugiat accumsan. Leo egestas commodo fermentum volutpat mollis. Risus nec convallis volutpat ornare mauris mattis rhoncus faucibus sit."
+      question: "Чи є безкоштовний функціонал?",
+      answer: "Так, і його дуже багато. Платні функції допомагають заробляти більше, але вже безкоштовне розміщення у каталозі приносить вам додаткових відвідувачів і нових клієнтів."
     },
     {
       id: 4,
-      question: "Lorem ipsum dolor sit amet consectetur adipiscing",
-      answer: "Lorem ipsum dolor sit amet consectetur. Accumsan tincidunt id sem eget ultrices lectus lacus feugiat accumsan. Leo egestas commodo fermentum volutpat mollis. Risus nec convallis volutpat ornare mauris mattis rhoncus faucibus sit."
-    },
-    {
-      id: 5,
-      question: "Lorem ipsum dolor sit amet consectetur adipiscing",
-      answer: "Lorem ipsum dolor sit amet consectetur. Accumsan tincidunt id sem eget ultrices lectus lacus feugiat accumsan. Leo egestas commodo fermentum volutpat mollis. Risus nec convallis volutpat ornare mauris mattis rhoncus faucibus sit."
+      question: "Чи можна додати щось своє?",
+      answer: "Звісно! Весь сервіс побудований на запитах зообізнесів. Ми розробляємо нові функції за вашими пропозиціями й інтегруємо їх в єдину зооекосистему."
     }
   ]
 };

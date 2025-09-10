@@ -2,7 +2,7 @@ import { CollaborationData } from '@/types';
 
 export const COLLABORATION_DATA: CollaborationData = {
   title: "Формат співпраці",
-  subtitle: "Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.",
+  subtitle: "Жодних підписок чи передоплат — ви сплачуєте лише за результат: або невелику комісію за підтверджену бронь, або відсоток від реального продажу. Оберіть формат співпраці, який зручний саме для вашого бізнесу.",
   plans: [
     {
       id: 1,

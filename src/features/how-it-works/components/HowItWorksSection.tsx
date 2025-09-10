@@ -1,21 +1,132 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { useGesture } from '@use-gesture/react';
 import { HOW_IT_WORKS_DATA } from '../constants';
 import { StepNumbers } from './StepNumbers';
 import { StepContent } from './StepContent';
 
 export const HowItWorksSection = () => {
   const [currentStep, setCurrentStep] = useState(1);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const lastGestureTime = useRef(0);
   
   const handleStepClick = (step: number) => {
     setCurrentStep(step);
   };
+
+  const nextStep = () => {
+    setCurrentStep((prev) => 
+      prev === HOW_IT_WORKS_DATA.steps.length ? 1 : prev + 1
+    );
+  };
+
+  const prevStep = () => {
+    setCurrentStep((prev) => 
+      prev === 1 ? HOW_IT_WORKS_DATA.steps.length : prev - 1
+    );
+  };
+
+  // Дополнительный обработчик wheel событий
+  const handleDirectWheel = (e: React.WheelEvent) => {
+    if (Math.abs(e.deltaY) > 20) {
+      e.preventDefault();
+      if (e.deltaY > 0) {
+        nextStep();
+      } else {
+        prevStep();
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (Math.abs(e.deltaY) > 30) {
+        e.preventDefault();
+        if (e.deltaY > 0) {
+          setCurrentStep((prev) => 
+            prev === HOW_IT_WORKS_DATA.steps.length ? 1 : prev + 1
+          );
+        } else {
+          setCurrentStep((prev) => 
+            prev === 1 ? HOW_IT_WORKS_DATA.steps.length : prev - 1
+          );
+        }
+      }
+    };
+
+    const section = sectionRef.current;
+    if (section) {
+      section.addEventListener('wheel', handleWheel, { passive: false });
+      return () => {
+        section.removeEventListener('wheel', handleWheel);
+      };
+    }
+  }, [HOW_IT_WORKS_DATA.steps.length]);
+
+  const bind = useGesture(
+    {
+      onDrag: ({ swipe: [swipeX], direction: [dirX], last, distance: [distX] }) => {
+        // Срабатываем только в конце жеста и если расстояние достаточное
+        if (last && Math.abs(distX) > 100) {
+          // Throttling - не чаще чем раз в 500ms
+          const now = Date.now();
+          if (now - lastGestureTime.current < 500) {
+            return;
+          }
+          lastGestureTime.current = now;
+          
+          if (dirX < -0.5) { // движение влево
+            setCurrentStep((prev) => 
+              prev === HOW_IT_WORKS_DATA.steps.length ? 1 : prev + 1
+            );
+          } else if (dirX > 0.5) { // движение вправо
+            setCurrentStep((prev) => 
+              prev === 1 ? HOW_IT_WORKS_DATA.steps.length : prev - 1
+            );
+          }
+        }
+      },
+      onWheel: ({ event, delta: [, deltaY] }) => {
+        if (Math.abs(deltaY) > 10) {
+          event.preventDefault(); // Предотвращаем скролл страницы
+          if (deltaY > 0) {
+            setCurrentStep((prev) => 
+              prev === HOW_IT_WORKS_DATA.steps.length ? 1 : prev + 1
+            );
+          }
+          if (deltaY < 0) {
+            setCurrentStep((prev) => 
+              prev === 1 ? HOW_IT_WORKS_DATA.steps.length : prev - 1
+            );
+          }
+        }
+      },
+    },
+    {
+      drag: {
+        axis: 'x',
+        threshold: 30, // Порог для начала распознавания
+        distance: 100, // Минимальное расстояние для срабатывания
+        swipe: {
+          distance: 150, // Минимальное расстояние для swipe
+          velocity: 0.3, // Минимальная скорость
+        },
+      },
+      wheel: {
+        threshold: 0,
+        preventDefault: true,
+      },
+    }
+  );
   
   const currentStepData = HOW_IT_WORKS_DATA.steps.find(step => step.id === currentStep) || HOW_IT_WORKS_DATA.steps[0];
   
   return (
-    <section className="pt-12 lg:pt-20 relative bg-[#f0f0f0] overflow-hidden">
+    <section 
+      className="pt-12 lg:pt-20 relative bg-[#f0f0f0] overflow-hidden"
+      style={{ touchAction: 'pan-y', userSelect: 'none' }}
+    >
       {/* Mobile background */}
       <div className="absolute inset-0 z-0 lg:hidden">
         {/* Purple circle - top right */}
@@ -69,7 +180,13 @@ export const HowItWorksSection = () => {
           />
         </div>
       </div>
-      <div className="container mx-auto px-4 relative z-10">
+      <div 
+        ref={sectionRef}
+        className="container mx-auto px-4 relative z-10"
+        {...bind()}
+        onWheel={handleDirectWheel}
+        style={{ touchAction: 'none' }}
+      >
         <div className="text-center mb-8 lg:mb-16 max-w-4xl mx-auto">
           <h2 className="text-2xl lg:text-5xl font-bold text-[#344054] mb-2 lg:mb-4">
             {HOW_IT_WORKS_DATA.title}
