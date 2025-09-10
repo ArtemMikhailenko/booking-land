@@ -1,7 +1,7 @@
 import { RiskFreeData } from '@/types';
 
 export const RISK_FREE_DATA: RiskFreeData = {
-  title: "Почему вы ничем не рискуете",
+  title: "Чому ви нічим не ризикуєте",
   buttonText: "Спробувати зараз",
   features: [
     {

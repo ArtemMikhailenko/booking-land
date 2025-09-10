@@ -1,8 +1,8 @@
 import { HowItWorksData } from '@/types';
 
 export const HOW_IT_WORKS_DATA: HowItWorksData = {
-  title: "Как это работает",
-  subtitle: "Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.",
+  title: "Як це працює",
+  subtitle: "Бронювання зоотоварів працює за знайомим принципом. Усе настільки просто й зрозуміло, що клієнтам не потрібно нічого вивчати.",
   steps: [
     {
       id: 1,

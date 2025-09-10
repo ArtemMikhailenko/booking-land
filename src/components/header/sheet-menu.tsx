@@ -40,28 +40,29 @@ export function SheetMenu({ onOpen, isOpen, side }: SheetProps) {
         <div className="pt-10 px-0">
         <nav className={styles.header__nav}>
           <div className={styles.header__nav_item}>
-            <Link 
-              href="/categories" 
+            <a 
+              href="https://4friends.in.ua/categories" 
               className={styles.header__nav_link}
               onClick={handleLinkClick}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Всі категорії
-            </Link>
+            </a>
           </div>
           {categoriesListHeader.map(item => (
             <div className={styles.header__nav_item} key={item.href}>
-              <Link
-                href={`/catalog/map?category=${item.href}`}
+              <a
+                href={item.href}
                 className={cn(
                   styles.header__nav_link,
                   'opacity-50 cursor-not-allowed pointer-events-none relative',
                 )}
                 aria-disabled="true"
-                
                 onClick={handleLinkClick}
               >
                 {item.label}
-              </Link>
+              </a>
               <Image
                 src="/images/in-development.png"
                 alt="development"
@@ -76,13 +77,15 @@ export function SheetMenu({ onOpen, isOpen, side }: SheetProps) {
         <nav className={styles.header__nav}>
           {pagesNav.map(item => (
             <div key={item.href} className={styles.header__nav_item}>
-              <Link 
+              <a 
                 href={item.href} 
                 className={styles.header__nav_link}
                 onClick={handleLinkClick}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 {item.label}
-              </Link>
+              </a>
             </div>
           ))}
         </nav>

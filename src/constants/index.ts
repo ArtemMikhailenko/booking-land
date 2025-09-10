@@ -1,3 +1,5 @@
+export const BASE_URL = 'https://4friends.in.ua';
+
 export const categoriesList = [
   { href: "veterinary", label: "Ветклініки" },
   { href: "grooming", label: "Грумінги" },
@@ -11,41 +13,41 @@ export const categoriesList = [
 export const categoriesListHeader = [
   {
     label: 'Маркетплейс',
-    href: 'vet-clinics',
+    href: `${BASE_URL}/vet-clinics`,
   },
   {
     label: 'Бронювання товарів',
-    href: 'pet-stores',
+    href: `${BASE_URL}/pet-stores`,
   },
   {
     label: 'Дошка оголошень',
-    href: 'hotels',
+    href: `${BASE_URL}/hotels`,
   },
 ];
 
 export const pagesNav = [
   {
     label: 'Про нас',
-    href: '/about-us',
+    href: `${BASE_URL}/about-us`,
   },
   {
     label: 'Контакти',
-    href: '/contact',
+    href: `${BASE_URL}/contact`,
   },
   {
     label: 'Блог',
-    href: '/blog',
+    href: `${BASE_URL}/blog`,
   },
   {
     label: 'Бібліотека знань',
-    href: '/library',
+    href: `${BASE_URL}/library`,
   },
   {
     label: 'Політика конфіденційності',
-    href: '/privacy-policy',
+    href: `${BASE_URL}/privacy-policy`,
   },
   {
     label: 'Roadmap',
-    href: '/roadmap',
+    href: `${BASE_URL}/roadmap`,
   },
 ];

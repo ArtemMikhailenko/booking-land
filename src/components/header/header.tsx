@@ -43,14 +43,19 @@ export function Header() {
             <nav className="hidden lg:block">
               <ul className={styles.header__nav}>
                 <li className={styles.header__nav_item}>
-                  <Link href="/categories" className={styles.header__nav_link}>
+                  <a 
+                    href="https://4friends.in.ua/categories" 
+                    className={styles.header__nav_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     Всі категорії
-                  </Link>
+                  </a>
                 </li>
                 {categoriesListHeader.map(item => (
                   <li className={styles.header__nav_item} key={item.href}>
-                    <Link
-                      href={`/catalog/map?category=${item.href}`}
+                    <a
+                      href={item.href}
                       className={cn(
                         styles.header__nav_link,
                         'opacity-50 cursor-not-allowed pointer-events-none',
@@ -58,7 +63,7 @@ export function Header() {
                       aria-disabled="true"
                     >
                       {item.label}
-                    </Link>
+                    </a>
                     <Image
                       src="/images/in-development.png"
                       alt="dev"

@@ -1,7 +1,7 @@
 import { CollaborationData } from '@/types';
 
 export const COLLABORATION_DATA: CollaborationData = {
-  title: "Формат сотрудничества",
+  title: "Формат співпраці",
   subtitle: "Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam neque ultrices.",
   plans: [
     {

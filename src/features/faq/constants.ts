@@ -1,7 +1,7 @@
 import { FAQData } from '@/types';
 
 export const FAQ_DATA: FAQData = {
-  title: "Часто задаваемые вопросы",
+  title: "Часто задавані питання",
   items: [
     {
       id: 1,
