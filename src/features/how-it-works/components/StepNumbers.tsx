@@ -6,7 +6,7 @@ interface StepNumbersProps {
 
 export const StepNumbers = ({ currentStep, totalSteps, onStepClick }: StepNumbersProps) => {
   return (
-    <div className="flex items-center justify-center mb-16">
+    <div className="flex items-center justify-center mb-[75px] lg:mb-16 relative z-20">
       {Array.from({ length: totalSteps }, (_, index) => {
         const stepNumber = index + 1;
         const isActive = stepNumber === currentStep;
@@ -16,7 +16,7 @@ export const StepNumbers = ({ currentStep, totalSteps, onStepClick }: StepNumber
           <div key={stepNumber} className="flex items-center">
             <button
               onClick={() => onStepClick(stepNumber)}
-              className={`text-5xl font-extrabold transition-colors duration-200 ${
+              className={`text-[30px] lg:text-5xl font-extrabold transition-colors duration-200 cursor-pointer hover:opacity-80 relative z-30 ${
                 isActive ? 'text-[#344054]' : 'text-white'
               }`}
             >
@@ -24,8 +24,8 @@ export const StepNumbers = ({ currentStep, totalSteps, onStepClick }: StepNumber
             </button>
             
             {stepNumber < totalSteps && (
-              <div className="mx-6">
-                <img src="/images/landing/dots-separator.svg" alt="" className="w-26 h-2" />
+              <div className="mx-1 lg:mx-6">
+                <img src="/images/landing/dots-separator.svg" alt="" className="w-13 lg:w-26 h-1 lg:h-2" />
               </div>
             )}
           </div>

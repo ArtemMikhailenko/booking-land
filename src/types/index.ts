@@ -88,6 +88,9 @@ export interface HowItWorksStep {
   title: string;
   description: string;
   imageSrc?: string;
+  imageSrc2?: string;
+  imageSrcMobile?: string;
+  imageSrc2Mobile?: string;
 }
 
 export interface HowItWorksData {

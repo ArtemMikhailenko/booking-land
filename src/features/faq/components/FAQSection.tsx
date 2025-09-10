@@ -4,13 +4,13 @@ import { FAQItem } from './FAQItem';
 
 export const FAQSection = () => {
   return (
-    <section className="py-16 bg-gray-50">
-      <div className=" mx-auto px-4 max-w-[994px]">
-        <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">
+    <section className="py-8 lg:py-16 bg-gray-50">
+      <div className="mx-auto px-4 lg:max-w-[994px]">
+        <h2 className="text-2xl lg:text-4xl font-bold text-center mb-8 lg:mb-12 text-gray-900">
           {FAQ_DATA.title}
         </h2>
         
-        <Accordion type="single" collapsible className="space-y-[24px]">
+        <Accordion type="single" collapsible className="space-y-4 lg:space-y-[24px]">
           {FAQ_DATA.items.map((item) => (
             <FAQItem key={item.id} item={item} />
           ))}

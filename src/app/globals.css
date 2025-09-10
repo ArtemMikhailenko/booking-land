@@ -176,3 +176,45 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Анимации для PlanCard */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.plan-card-expand {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+.plan-card-content {
+  animation: fadeIn 0.7s ease-out 0.2s both;
+}
+
+.plan-card-steps {
+  animation: slideUp 0.6s ease-out 0.4s both;
+}
+
+/* Hide scrollbar */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}

@@ -1,28 +1,28 @@
 import { PricingData } from '@/types';
 
 export const PRICING_DATA: PricingData = {
-  title: "Что входит в стоимость",
+  title: "Що входить у вартість",
   buttonText: "Спробувати зараз",
   features: [
     {
       id: 1,
-      title: "Заголовок",
-      description: "Lorem ipsum dolor sit amet consectetur. Accumsan tincidunt id sem eget ultrices lectus lacus feugiat accumsan. Leo egestas commodo fermentum volutpat mollis. Risus nec convallis volutpat ornare mauris mattis rhoncus faucibus sit. Porttitor sit enim proin vitae sed cursus pellentesque. Feugiat urna augue donec amet magna. Iaculis condimentum a pellentesque etiam lectus euismod congue. Morbi curabitur interdum sed sagittis porttitor sed velit risus fringilla. Nunc vitae volutpat amet nunc et."
+      title: "Нові клієнти",
+      description: "Ви сплачуєте лише за реальний результат — коли відбулася покупка. Ніяких прихованих платежів чи передоплат."
     },
     {
       id: 2,
-      title: "Заголовок",
-      description: "Lorem ipsum dolor sit amet consectetur. Accumsan tincidunt id sem eget ultrices lectus lacus feugiat accumsan. Leo egestas commodo fermentum volutpat mollis. Risus nec convallis volutpat ornare mauris mattis rhoncus faucibus sit. Porttitor sit enim proin vitae sed cursus pellentesque. Feugiat urna augue donec amet magna. Iaculis condimentum a pellentesque etiam lectus euismod congue. Morbi curabitur interdum sed sagittis porttitor sed velit risus fringilla. Nunc vitae volutpat amet nunc et."
+      title: "Повторні продажі",
+      description: "У вас залишається власна база клієнтів, з якою ви можете працювати прямо через сервіс: розсилки, акції, нагадування."
     },
     {
       id: 3,
-      title: "Заголовок", 
-      description: "Lorem ipsum dolor sit amet consectetur. Accumsan tincidunt id sem eget ultrices lectus lacus feugiat accumsan. Leo egestas commodo fermentum volutpat mollis. Risus nec convallis volutpat ornare mauris mattis rhoncus faucibus sit. Porttitor sit enim proin vitae sed cursus pellentesque. Feugiat urna augue donec amet magna. Iaculis condimentum a pellentesque etiam lectus euismod congue. Morbi curabitur interdum sed sagittis porttitor sed velit risus fringilla. Nunc vitae volutpat amet nunc et."
+      title: "Допомога штучного інтелекту", 
+      description: "У вашому кабінеті доступний ChatGPT PRO, який допоможе вирішувати маркетингові, текстові та організаційні завдання."
     },
     {
       id: 4,
-      title: "Заголовок",
-      description: "Lorem ipsum dolor sit amet consectetur. Accumsan tincidunt id sem eget ultrices lectus lacus feugiat accumsan. Leo egestas commodo fermentum volutpat mollis. Risus nec convallis volutpat ornare mauris mattis rhoncus faucibus sit. Porttitor sit enim proin vitae sed cursus pellentesque. Feugiat urna augue donec amet magna. Iaculis condimentum a pellentesque etiam lectus euismod congue. Morbi curabitur interdum sed sagittis porttitor sed velit risus fringilla. Nunc vitae volutpat amet nunc et."
+      title: "Техпідтримка та офлайн-представництво",
+      description: "Ми завжди на зв'язку: без довгих листувань, швидко вирішуємо питання та допомагаємо налаштувати систему. А за потреби наш представник приїде безпосередньо до вашого офісу."
     }
   ]
 };

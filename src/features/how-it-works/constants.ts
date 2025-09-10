@@ -12,27 +12,25 @@ export const HOW_IT_WORKS_DATA: HowItWorksData = {
     },
     {
       id: 2,
-      title: "Выберите категорию",
-      description: "Выберите нужную категорию услуг для вашего питомца",
-      imageSrc: "/images/phone-categories.png"
+      title: "Вивчіть все про товар",
+      description: "Переглядайте детальну інформацію про товари, порівнюйте ціни та характеристики. Обирайте вагу, колір та інші параметри відповідно до потреб вашого улюбленця",
+      imageSrc: "/images/landing/mobile-tab2.png",
+      imageSrc2: "/images/landing/mobile2-tab2.png",
+      imageSrcMobile: "/images/landing/mobile-tab2-small.png",
+      imageSrc2Mobile: "/images/landing/mobile2-tab2-small.png"
     },
     {
       id: 3,
       title: "Забронируйте услугу",
       description: "Забронируйте удобное время и дату для оказания услуги",
-      imageSrc: "/images/phone-booking.png"
+      imageSrc: "/images/landing/mobile-tab3.png"
     },
     {
       id: 4,
       title: "Получите услугу",
       description: "Специалист приедет в назначенное время и окажет качественную услугу",
-      imageSrc: "/images/phone-service.png"
+      imageSrc: "/images/landing/mobile-tab4.png"
     },
-    {
-      id: 5,
-      title: "Оставьте отзыв",
-      description: "Поделитесь своим опытом и помогите другим владельцам питомцев",
-      imageSrc: "/images/phone-review.png"
-    }
+    
   ]
 };
