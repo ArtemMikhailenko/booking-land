@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { DogImage } from './components/DogImage';
 import { CategoriesList } from './components/CategoriesList';
 import { HERO_CATEGORIES, HERO_CONTENT } from './constants';
+import { MAIN_ACTION_URL } from '@/constants';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -93,10 +94,13 @@ export const HeroSection: React.FC = () => {
             </p>
             
             <Button 
+              asChild
               className="bg-[#9270cb] text-white w-full h-[53px] rounded-[48px] text-[14px] font-medium"
               style={{ fontFamily: "'Wix Madefor Text', sans-serif" }}
             >
-              Почати
+              <a href={MAIN_ACTION_URL} target="_blank" rel="noopener noreferrer">
+                Почати
+              </a>
             </Button>
           </div>
 
@@ -174,9 +178,12 @@ export const HeroSection: React.FC = () => {
                 </p>
                 
                 <Button 
+                  asChild
                   className="bg-[#9270cb] hover:bg-[transparent] text-[16px] hover:text-[#9270cb] hover:border-[#9270cb] hover:border-2 text-white px-8 py-4 sm:w-[226px] sm:h-[60px] rounded-full text-base font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
                 >
-                  {HERO_CONTENT.buttonText}
+                  <a href={MAIN_ACTION_URL} target="_blank" rel="noopener noreferrer">
+                    {HERO_CONTENT.buttonText}
+                  </a>
                 </Button>
               </div>
             </div>

@@ -1,4 +1,5 @@
 export const BASE_URL = 'https://4friends.in.ua';
+export const MAIN_ACTION_URL = BASE_URL; // URL для основных кнопок действий
 
 export const categoriesList = [
   { href: "veterinary", label: "Ветклініки" },

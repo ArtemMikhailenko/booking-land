@@ -1,4 +1,4 @@
-import { categoriesList, pagesNav } from '@/constants';
+import { categoriesList, pagesNav, BASE_URL } from '@/constants';
 import { Headphones } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -16,12 +16,14 @@ export function Footer() {
               <li className={styles.footer__menu_title}>Каталог</li>
               {categoriesList.map(item => (
                 <li key={item.href}>
-                  <Link
-                    href={`/catalog/map?category=${item.href}`}
+                  <a
+                    href={`${BASE_URL}/catalog/map?category=${item.href}`}
                     className={styles.footer__menu_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>
@@ -29,9 +31,14 @@ export function Footer() {
               <li className={styles.footer__menu_title}>Сервіси</li>
               {pagesNav.map(item => (
                 <li key={item.href}>
-                  <Link href={item.href} className={styles.footer__menu_link}>
+                  <a 
+                    href={item.href} 
+                    className={styles.footer__menu_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     {item.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

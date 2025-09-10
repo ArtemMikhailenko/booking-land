@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { PricingCard } from "./components/PricingCard";
 import { PRICING_DATA } from "./constants";
+import { MAIN_ACTION_URL } from '@/constants';
 
 export function PricingSection() {
   return (
@@ -89,11 +90,13 @@ export function PricingSection() {
           {/* Button */}
           <div className="flex justify-center mb-6 relative z-10">
             <Button 
-           
+              asChild
               className="bg-[#9270cb] hover:bg-[transparent] hover:text-[#9270cb] hover:border-[#9270cb] border border-[#9270cb] h-[50px] w-full sm:max-w-[280px] text-white rounded-full text-base"
               style={{fontFamily: "'Wix Madefor Text', sans-serif", fontWeight: '500'}}
             >
-              {PRICING_DATA.buttonText}
+              <a href={MAIN_ACTION_URL} target="_blank" rel="noopener noreferrer">
+                {PRICING_DATA.buttonText}
+              </a>
             </Button>
           </div>
           
@@ -146,11 +149,14 @@ export function PricingSection() {
             {/* Button */}
             <div className="flex justify-end">
               <Button 
+                asChild
                 size="lg" 
                 className="bg-[#9270cb] hover:bg-[transparent] hover:text-[#9270cb] hover:border-[#9270cb] border border-[#9270cb] h-[60px] w-[282px] text-white rounded-full"
                 style={{fontFamily: "'Wix Madefor Text', sans-serif", fontSize: '16px', lineHeight: '150%', fontWeight: '500'}}
               >
-                {PRICING_DATA.buttonText}
+                <a href={MAIN_ACTION_URL} target="_blank" rel="noopener noreferrer">
+                  {PRICING_DATA.buttonText}
+                </a>
               </Button>
             </div>
           </div>
