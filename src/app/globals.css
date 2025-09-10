@@ -132,6 +132,16 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  
+  /* Custom variables for footer */
+  --text: #344054;
+  --white: #ffffff;
+  --yellow: #f4c430;
+  --green: #f4f1fa;
+  --pagination-grey: #98a2b3;
+  --link-color: #e4e7ec;
+  --font-geologica: 'Geologica', sans-serif;
+  --font-semibold: 'Wix SemiBold', sans-serif;
 }
 
 .dark {

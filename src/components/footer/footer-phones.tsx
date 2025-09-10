@@ -4,21 +4,21 @@ import Link from "next/link";
 export function FooterPhones() {
   return (
     <div className='flex items-start gap-3 text-white font-semibold'>
-      <Headphones className="size-6 text-purple-500" />
-      <ul className='grid gap-2'>
+      <Headphones className="size-6 text-[#9270cb]" />
+      <ul className='flex flex-col gap-3'>
         <li>
-          <Link href="tel:+380979472301" className="hover:text-purple-300 transition-colors">
-            +380 97 947 23 01
+          <Link href="tel:0800500505" className="hover:text-purple-300 transition-colors text-base font-semibold text-[#f4f1fa] leading-[130%]">
+            0800 500 50 50
           </Link>
         </li>
         <li>
-          <Link href="tel:+380753002461" className="hover:text-purple-300 transition-colors">
-            +380 75 300 24 61
+          <Link href="tel:0800500505" className="hover:text-purple-300 transition-colors text-base font-semibold text-[#f4f1fa] leading-[130%]">
+            0800 500 50 50
           </Link>
         </li>
         <li>
-          <Link href="tel:+380632359617" className="hover:text-purple-300 transition-colors">
-            +380 63 235 96 17
+          <Link href="tel:0800500505" className="hover:text-purple-300 transition-colors text-base font-semibold text-[#f4f1fa] leading-[130%]">
+            0800 500 50 50
           </Link>
         </li>
       </ul>

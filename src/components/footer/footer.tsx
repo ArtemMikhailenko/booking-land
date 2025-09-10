@@ -1,41 +1,120 @@
-import Socials from "../socials"
-import { FooterBottom } from "./footer-bottom"
-import FooterForm from "./footer-form"
-import { FooterMenus } from "./footer-menus"
-import { FooterPayments } from "./footer-payments"
-import { FooterPhones } from "./footer-phones"
+import { categoriesList, pagesNav } from '@/constants';
+import { Headphones } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import Socials from '../socials';
+import FooterForm from './footer-form';
+import styles from './styles.module.scss';
 
 export function Footer() {
   return (
-    <>
-    <footer className="bg-gray-900 mt-20 hidden py-9 sm:block">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col justify-between gap-10 lg:flex-row">
-          <FooterMenus />
-          <div className="grid w-full max-w-[486px] shrink-0 gap-10">
+    <footer className={styles.footer} style={{ backgroundColor: '#344054' }}>
+      <div className={styles.container}>
+        <div className={styles.footer__inner}>
+          <div className={styles.footer__menus}>
+            <ul className={styles.footer__menu}>
+              <li className={styles.footer__menu_title}>Каталог</li>
+              {categoriesList.map(item => (
+                <li key={item.href}>
+                  <Link
+                    href={`/catalog/map?category=${item.href}`}
+                    className={styles.footer__menu_link}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <ul className={styles.footer__menu}>
+              <li className={styles.footer__menu_title}>Сервіси</li>
+              {pagesNav.map(item => (
+                <li key={item.href}>
+                  <Link href={item.href} className={styles.footer__menu_link}>
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className={styles.footer__contacts}>
             <FooterForm />
-            <div className="flex flex-wrap justify-between gap-3 sm:flex-nowrap">
-              <FooterPhones />
-              <div className="grid gap-6">
-                <Socials
-                  networks={[
-                    "facebook",
-                    "instagram",
-                    "telegram",
-                    "viber",
-                    "whatsapp",
-                  ]}
-                  size={32}
-                  className="justify-between"
-                />
-                <FooterPayments />
+            <div className={styles.footer__links}>
+              <div className={styles.footer__phones}>
+                <Headphones />
+                <ul className={styles.footer__phones_list}>
+                  <li>
+                    <Link
+                      href="tel:+380979472301"
+                      className={styles.footer__phones_link}
+                    >
+                      +380 97 947 23 01
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="tel:+380753002461"
+                      className={styles.footer__phones_link}
+                    >
+                      +380 75 300 24 61
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="tel:+380632359617"
+                      className={styles.footer__phones_link}
+                    >
+                      +380 63 235 96 17
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col gap-6">
+                <Socials className={styles.footer__socials} />
+                <ul className={styles.footer__payments}>
+                  <li>
+                    <Image
+                      src="/images/payments/payment4.svg"
+                      width={51}
+                      height={36}
+                      alt="payment"
+                    />
+                  </li>
+                  <li>
+                    <Image
+                      src="/images/payments/payment1.svg"
+                      width={51}
+                      height={36}
+                      alt="payment"
+                    />
+                  </li>
+                  <li>
+                    <Image
+                      src="/images/payments/payment2.svg"
+                      width={51}
+                      height={36}
+                      alt="payment"
+                    />
+                  </li>
+                  <li>
+                    <Image
+                      src="/images/payments/payment3.svg"
+                      width={51}
+                      height={36}
+                      alt="payment"
+                    />
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-        <FooterBottom />
+        <div className={styles.footer__copyright}>
+          <h2 className={styles.footer__logo}>
+            <Image src="/images/logo.svg" width={100} height={100} alt="logo" />
+          </h2>
+          <p>©{new Date().getFullYear()}. Всі права захищені.</p>
+        </div>
       </div>
     </footer>
-    </>
-  )
+  );
 }

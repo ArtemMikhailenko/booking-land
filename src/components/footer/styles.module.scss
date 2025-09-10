@@ -1,0 +1,235 @@
+.footer {
+  background: #344054 !important;
+  padding: 36px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  color: #98a2b3;
+  padding-top: 24px;
+  border-top: 1px solid #98a2b3;
+}
+
+.footer__copyright h2 {
+  font-family: 'Geologica', sans-serif;
+  font-size: 35px;
+  font-weight: 800;
+}
+
+.footer__copyright p {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.footer__inner {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__menus {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  color: #ffffff;
+  width: 50%;
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer__menu_link {
+  transition: all 0.3s ease;
+}
+
+.footer__menu_link:hover {
+  color: #f4c430;
+}
+
+.footer__menu_title {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer__contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.footer__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 472px;
+}
+
+.footer__form_title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 18px;
+  color: #9270cb;
+  font-family: 'Wix SemiBold', sans-serif;
+}
+
+.footer__form_title svg {
+  flex-shrink: 0;
+}
+
+.footer__form_form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__form_form_row {
+  display: flex;
+  gap: 12px;
+  height: 44px;
+}
+
+.footer__form_input {
+  height: 100%;
+  padding: 10px 24px;
+  border: 1px solid #98a2b3;
+  border-radius: 32px;
+  background: white;
+}
+
+.footer__form_btn {
+  background: #9270cb;
+  color: #ffffff;
+  height: 100%;
+  max-width: 181px;
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 32px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer__form_btn:hover {
+  background: #7c5fb3;
+}
+
+.footer__form_checkbox {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #e4e7ec;
+  font-size: 14px;
+}
+
+.footer__links {
+  color: #f4f1fa;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer__phones {
+  display: flex;
+  gap: 12px;
+}
+
+.footer__phones_list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer__phones_link {
+  font-family: 'Wix SemiBold', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.footer__phones_link:hover {
+  color: #f4c430;
+}
+
+.footer__payments {
+  display: flex;
+  gap: 24px;
+}
+
+.footer__logo {
+  font-size: 0;
+  filter: brightness(0) invert(1);
+}
+
+@media screen and (max-width: 992px) {
+  .footer__inner {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .footer__menus {
+    width: 100%;
+  }
+  
+  .footer__menu_link {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .footer__form_title {
+    font-size: 16px;
+  }
+  
+  .footer__form_title svg {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .footer__form_btn {
+    font-size: 14px;
+    max-width: 108px;
+    color: #ffffff;
+  }
+  
+  .footer__payments {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: fit-content;
+  }
+  
+  .footer__links {
+    position: relative;
+    padding-bottom: 50px;
+  }
+  
+  .footer__socials {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .footer__copyright p {
+    font-size: 10px;
+  }
+  
+  .withCheckbox {
+    height: auto;
+    flex-direction: column;
+  }
+  
+  .withCheckbox .footer__form_btn {
+    max-width: unset;
+  }
+}

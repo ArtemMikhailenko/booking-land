@@ -1,56 +1,60 @@
-"use client"
+'use client';
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import Envelopes from "./envelopes"
+import React, { useState } from 'react';
 
-function FooterForm() {
-  const [email, setEmail] = useState("")
-  const [isSubmitting, setIsSubmitting] = useState(false)
+import { cn } from '@/lib/utils';
+import Envelopes from './envelopes';
+import styles from './styles.module.scss';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!email) return
+interface FooterFormProps {
+  showCheckboxProp?: boolean;
+}
 
-    setIsSubmitting(true)
-    try {
-      console.log("Отправка данных:", { email })
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      alert("Спасибо за подписку!")
-      setEmail("")
-    } catch (error) {
-      console.error("Ошибка при отправке:", error)
-    } finally {
-      setIsSubmitting(false)
-    }
-  }
+function FooterForm({ showCheckboxProp }: FooterFormProps) {
+  const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <div className="flex max-w-[486px] flex-col gap-3">
-      <h3 className="font-semibold flex items-center gap-4 text-lg leading-tight text-white">
+    <div className={styles.footer__form}>
+      <h3 className={styles.footer__form_title}>
         <Envelopes />
         Підпишіться, щоб отримувати найкращі пропозиції першим
       </h3>
-      <form onSubmit={handleSubmit} className="flex items-start gap-3">
-        <Input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-          className="rounded-full !bg-white flex-1"
-          required
-        />
-        <Button 
-          type="submit" 
-          disabled={isSubmitting}
-          className="bg-purple-500 hover:bg-purple-600 text-white w-[200px] rounded-full"
+      <form className={styles.footer__form_form}>
+        <div
+          className={cn(styles.footer__form_form_row, {
+            [styles.withCheckbox]: showCheckboxProp,
+          })}
         >
-          {isSubmitting ? "Підписка..." : "Підписатись"}
-        </Button>
+          <Input
+            type="text"
+            placeholder="Email"
+            className={styles.footer__form_input}
+          />
+          <Button
+            type="submit"
+            variant="default"
+            className={styles.footer__form_btn}
+          >
+            Підписатись
+          </Button>
+        </div>
+
+        {showCheckboxProp && (
+          <div className={styles.footer__form_checkbox}>
+            <input
+              type="checkbox"
+              checked={isChecked}
+              onChange={(e) => setIsChecked(e.target.checked)}
+              className="border-[#98A2B3]"
+            />
+            <span>Я даю згоду на обробку даних</span>
+          </div>
+        )}
       </form>
     </div>
-  )
+  );
 }
 
-export default FooterForm
+export default FooterForm;

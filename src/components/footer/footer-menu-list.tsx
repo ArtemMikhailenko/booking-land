@@ -21,18 +21,18 @@ export function FooterMenuList({
   className,
 }: FooterMenuBlockProps) {
   return (
-    <div className={cn("text-white font-medium min-w-[176px]", className)}>
-      <h4 className="text-sm mb-4 font-semibold">{title}</h4>
-      <ul className="grid gap-2">
+    <div className={cn("text-white font-medium w-[176px]", className)}>
+      <h4 className="text-sm mb-[8px] font-medium text-[#f9fafb] leading-[150%]">{title}</h4>
+      <ul className="flex flex-col gap-[8px]">
         {items.map((item, idx) => (
           <li key={idx} className="flex items-center gap-2">
             <Link
               href={item.url}
-              className="flex items-center gap-2 text-base hover:underline hover:text-purple-300 transition-colors">
+              className="flex items-center gap-2 text-base font-medium text-white leading-[150%] hover:underline hover:text-purple-300 transition-colors">
               {item.name}
             </Link>
             {item.badge && (
-              <span className="text-xs bg-purple-500 text-white px-2 py-1 rounded-full capitalize">
+              <span className="text-xs bg-[#9270cb] text-[#f4f1fa] px-2 py-[2px] rounded-[16px] font-medium leading-[18px]">
                 {item.badge}
               </span>
             )}

@@ -1,34 +1,68 @@
-import { cn } from "@/lib/utils"
+import Link from 'next/link';
+import {
+  FaFacebook,
+  FaInstagram,
+  FaTelegram,
+  FaViber,
+  FaWhatsapp,
+} from 'react-icons/fa6';
+import { cn } from '@/lib/utils';
+import styles from './socials/styles.module.scss';
 
 interface SocialsProps {
-  networks: string[]
-  size?: number
-  className?: string
+  className?: string;
 }
 
-const socialIcons: Record<string, string> = {
-  facebook: "📘",
-  instagram: "📷",
-  telegram: "✈️",
-  viber: "💜",
-  whatsapp: "💬"
-}
-
-function Socials({ networks, size = 24, className }: SocialsProps) {
+function Socials({ className }: SocialsProps) {
   return (
-    <div className={cn("flex gap-3", className)}>
-      {networks.map((network) => (
-        <a
-          key={network}
-          href={`#${network}`}
-          className="flex items-center justify-center w-8 h-8 bg-white rounded-full hover:bg-gray-100 transition-colors"
-          style={{ width: size, height: size }}
+    <ul className={cn(styles.social, className)}>
+      <li>
+        <Link
+          href="https://www.facebook.com/4friends"
+          target="_blank"
+          className={styles.social_link}
         >
-          <span className="text-lg">{socialIcons[network] || "🔗"}</span>
-        </a>
-      ))}
-    </div>
-  )
+          <FaFacebook className="size-8" />
+        </Link>
+      </li>
+      <li>
+        <Link
+          target="_blank"
+          href="https://www.instagram.com/4friends.ua/profilecard/?igsh=MWJ5OTg1a2l4ZWkyNQ=="
+          className={styles.social_link}
+        >
+          <FaInstagram className="size-8" />
+        </Link>
+      </li>
+      <li>
+        <Link
+          target="_blank"
+          href="https://t.me/UA4friends"
+          className={styles.social_link}
+        >
+          <FaTelegram className="size-8" />
+        </Link>
+      </li>
+      <li>
+        <Link
+          target="_blank"
+          href="https://wa.me/+380931434503"
+          className={styles.social_link}
+        >
+          <FaWhatsapp className="size-8" />
+        </Link>
+      </li>
+      <li>
+        <Link
+          target="_blank"
+          href="https://connect.viber.com/business/4537961e-190f-11f0-909c-36482bc6d4ae?utm_source=manage&utm_medium=copy_link"
+          className={styles.social_link}
+        >
+          <FaViber className="size-8" />
+        </Link>
+      </li>
+    </ul>
+  );
 }
 
-export default Socials
+export default Socials;

@@ -1,0 +1,19 @@
+.social {
+  display: flex;
+  gap: 24px;
+}
+
+.social_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #f4f1fa;
+  transition: all 0.3s ease;
+}
+
+.social_link:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+}
