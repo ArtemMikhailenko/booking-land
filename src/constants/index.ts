@@ -8,11 +8,44 @@ export const categoriesList = [
   { href: "breeders", label: "Розплідники" },
 ];
 
+export const categoriesListHeader = [
+  {
+    label: 'Маркетплейс',
+    href: 'vet-clinics',
+  },
+  {
+    label: 'Бронювання товарів',
+    href: 'pet-stores',
+  },
+  {
+    label: 'Дошка оголошень',
+    href: 'hotels',
+  },
+];
+
 export const pagesNav = [
-  { href: "/contacts", label: "Контакти" },
-  { href: "/blog", label: "Блог і новини" },
-  { href: "/knowledge", label: "Бібліотека знань" },
-  { href: "/pricing", label: "Тарифи" },
-  { href: "/support", label: "Технічна підтримка" },
-  { href: "/partnership", label: "Співпраця" },
+  {
+    label: 'Про нас',
+    href: '/about-us',
+  },
+  {
+    label: 'Контакти',
+    href: '/contact',
+  },
+  {
+    label: 'Блог',
+    href: '/blog',
+  },
+  {
+    label: 'Бібліотека знань',
+    href: '/library',
+  },
+  {
+    label: 'Політика конфіденційності',
+    href: '/privacy-policy',
+  },
+  {
+    label: 'Roadmap',
+    href: '/roadmap',
+  },
 ];

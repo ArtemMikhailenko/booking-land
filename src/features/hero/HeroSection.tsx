@@ -6,7 +6,7 @@ import { HERO_CATEGORIES, HERO_CONTENT } from './constants';
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="bg-[#e1e1e1] relative overflow-hidden">
+    <section className="bg-[#e1e1e1] relative overflow-hidden pt-[100px] lg:pt-[40px]">
       {/* Mobile background */}
       <div className="absolute inset-0 z-0 lg:hidden">
         {/* Purple background - center left */}

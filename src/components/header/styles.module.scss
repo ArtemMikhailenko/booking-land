@@ -1,0 +1,340 @@
+.header {
+//   padding-bottom: 24px;
+  background-color: transparent;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  
+}
+
+.header__top {
+  background-color: #9270cb !important;
+  padding: 8px 0;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.header__top_inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__top_phone {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header__top_phone a {
+  transition: all 0.3s ease;
+}
+
+.header__top_phone a:hover {
+  color: #f4c430;
+}
+
+.header__top_social {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header__top_social svg {
+  width: 20px;
+  height: 20px;
+  transition: all 0.3s ease;
+}
+
+.header__top_social svg:hover {
+  color: #f4c430;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  background-color: transparent;
+}
+
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-right: 22px;
+}
+
+.header__nav_item {
+  display: flex;
+  // position: relative;
+  align-items: center;
+}
+
+.header__nav_item img {
+  position: absolute;
+  right: -20px;
+  bottom: 8px;
+  max-width: 58px;
+}
+
+.header__nav_link {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.header__nav_link::before {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f4c430;
+  transition: all 0.3s ease;
+}
+
+.header__nav_link:hover {
+  color: #f4c430;
+}
+
+.header__nav_link:hover::before {
+  width: 100%;
+  right: auto;
+  left: 0;
+}
+
+.header__auth {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__auth_wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header__auth_btn {
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 32px;
+}
+
+.header__burger {
+  padding: 0;
+}
+
+.header__burger svg {
+  width: 24px;
+  height: 24px;
+}
+
+.header__menu .header__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0;
+  margin-bottom: 16px;
+}
+
+.header__menu .header__nav_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 20px;
+}
+
+.header__menu .header__nav_link {
+  display: block;
+  padding: 12px 0;
+  flex: 1;
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border-bottom: none;
+}
+
+.header__menu .header__nav_link:hover {
+  background-color: transparent;
+  color: #9270cb;
+}
+
+.header__menu .header__nav_item img {
+  position: static;
+  max-width: 58px;
+  height: auto;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+// Стили для кнопок авторизации в мобильном меню
+.header__menu .header__auth {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 20px;
+  border-top: 1px solid #f0f0f0;
+  margin-top: 20px;
+}
+
+.header__menu .header__auth_button {
+  width: 100%;
+  justify-content: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.header__menu .header__auth_btn {
+  border: 1px solid #9270cb;
+  color: #9270cb;
+  background: white;
+  margin-bottom: 8px;
+}
+
+.header__menu .header__auth_btn:hover {
+  background: #9270cb;
+  color: white;
+}
+
+/* Container class */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Мобильное меню */
+.mobile_menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-top: 1px solid #e5e5e5;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  padding: 20px;
+}
+
+.mobile_nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.mobile_nav li {
+  margin-bottom: 12px;
+}
+
+.mobile_nav a {
+  display: block;
+  padding: 8px 0;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile_nav a:hover {
+  color: #9270cb;
+}
+
+.mobile_auth {
+  display: flex;
+  gap: 12px;
+}
+
+.mobile_auth a {
+  padding: 8px 16px;
+  border-radius: 32px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  flex: 1;
+}
+
+.mobile_auth a:first-child {
+  border: 1px solid #9270cb;
+  color: #9270cb;
+  background: white;
+}
+
+.mobile_signup {
+  background: #9270cb !important;
+  color: white !important;
+}
+
+@media screen and (max-width: 1140px) {
+  .header__nav {
+    display: none;
+  }
+  
+  .header__menu .header__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__top_social {
+    gap: 16px;
+  }
+  
+  .header__auth {
+    gap: 8px;
+  }
+  
+  .header__auth_btn {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+/* Sheet Menu Styles */
+.sheet_menu {
+  padding: 0 !important;
+}
+
+.sheet_menu .header__nav {
+  margin-bottom: 0;
+}
+
+.sheet_menu .header__nav_link {
+  text-decoration: none !important;
+}
+
+/* Override default shadcn sheet styles */
+:global([data-radix-scroll-area-viewport]) {
+  padding: 0 !important;
+}
+
+:global(.sheet-content) {
+  padding: 0 !important;
+}
+
+/* Убираем подчеркивания для всех ссылок в мобильном меню */
+.header__menu a {
+  text-decoration: none !important;
+}
+
+.header__menu a:hover {
+  text-decoration: none !important;
+}

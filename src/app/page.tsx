@@ -6,10 +6,12 @@ import { CollaborationSection } from '@/features/collaboration';
 import { HowItWorksSection } from '@/features/how-it-works';
 import { FAQSection } from '@/features/faq';
 import { Footer } from '@/components/footer';
+import { Header } from '@/components/header';
 
 export default function Home() {
   return (
     <>
+      <Header />
       <main className='bg-[#f0f0f0] overflow-hidden'>
         <HeroSection />
         <ProductAudienceSection />
