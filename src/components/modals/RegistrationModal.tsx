@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { X } from 'lucide-react';
-import { BASE_URL } from '@/constants';
 import { toast } from 'sonner';
 
 interface RegistrationModalProps {
@@ -29,10 +28,6 @@ export const RegistrationModal = ({ isOpen, onClose }: RegistrationModalProps) =
 
   const handleLeaveRequest = () => {
     setStep('form');
-  };
-
-  const handleBack = () => {
-    setStep('initial');
   };
 
   const resetModal = () => {
@@ -103,7 +98,7 @@ export const RegistrationModal = ({ isOpen, onClose }: RegistrationModalProps) =
       await sendContactForm();
       setIsSubmitted(true);
       
-      toast.success("Заявка відправлена! Ми зв'яжемося з вами у найближчий час!", {
+      toast.success("Заявка відправлена! Ми зв&apos;яжемося з вами у найближчий час!", {
         style: {
           background: 'white',
           color: 'black',
@@ -191,14 +186,14 @@ export const RegistrationModal = ({ isOpen, onClose }: RegistrationModalProps) =
                 Заповніть форму
               </h2>
               <p className="text-base font-semibold text-[#667085] leading-[130%] font-wix-display-medium">
-                ми зв'яжемося з вами в найближчий час
+                ми зв&apos;яжемося з вами в найближчий час
               </p>
             </div>
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-5 mb-5">
               <div className="space-y-2">
-                <label className="text-base text-[#344054] font-wix-regular">Ім'я</label>
+                <label className="text-base text-[#344054] font-wix-regular">Ім&apos;я</label>
                 <input
                   type="text"
                   name="name"
